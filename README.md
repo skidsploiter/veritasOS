@@ -61,7 +61,7 @@ This will:
 | ---------------- | ---------------------------------------------- |
 | `bootloader.asm` | Bootloader. Loads the kernel. Minimalist hell. |
 | `kernel.asm`     | Main code. Fake shell. Real vibes.             |
-| `build.bat`      | The dumbass batch script that builds it.       |
+| `comp.bat`       | The dumbass batch script that builds it.       |
 | `floppy.img`     | The cursed floppy image output.                |
 
 ---
@@ -89,7 +89,7 @@ This will:
 
 ---
 
-## 🖕 Final Words
+## 🤑 Final Words
 
 Built for chaos, by chaos.
 Have fun. Break stuff. Boot floppies.
