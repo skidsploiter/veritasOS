@@ -7,6 +7,7 @@ ver_msg        db "VeritasOS | Testing Build v1.0", 0x0D, 0x0A, 0
 help_msg       db "Available commands: ver, cls, help, echo", 0x0D, 0x0A, 0
 input_buffer   times 128 db 0
 
+; just prints whatever’s at SI until it hits 0
 print_msg:
     mov ah, 0x0E
 .next_char:
@@ -18,11 +19,13 @@ print_msg:
 .done:
     ret
 
+; print one char in AL
 print_char:
     mov ah, 0x0E
     int 0x10
     ret
 
+; grabs keyboard input into input_buffer
 read_line:
     xor cx, cx
 .read_loop:
@@ -57,6 +60,7 @@ read_line:
     call print_msg
     ret
 
+; string compare but made outta duct tape
 strcmp:
     push si
     push di
@@ -78,6 +82,7 @@ strcmp:
     pop si
     ret
 
+; clears screen the lazy BIOS way
 clear_screen:
     mov ah, 0x00
     mov al, 0x03
@@ -98,6 +103,7 @@ k_main:
     mov di, input_buffer
     call read_line
 
+    ; dumb if chain to check commands
     mov si, input_buffer
     mov di, cmd_ver
     call strcmp
@@ -152,6 +158,7 @@ k_main:
     call print_msg
     jmp .loop
 
+; unused junk?
 .find_space:
     lodsb
     cmp al, ' '
@@ -164,6 +171,7 @@ k_main:
     call print_msg
     jmp .loop
 
+; command strings go here
 cmd_ver  db "ver", 0
 cmd_cls  db "cls", 0
 cmd_help db "help", 0
