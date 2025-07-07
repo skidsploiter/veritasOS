@@ -41,10 +41,10 @@ Welcome to **VeritasOS** — a tiny dumbass bootable OS written entirely in 16-b
 
 ### 📦 Build Steps
 
-Run this in your terminal like the giga chad you are:
+Run this in your terminal like the **SKID** you are:
 
 ```bash
-build.bat
+comp.bat
 ````
 
 This will:
