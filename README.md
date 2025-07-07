@@ -1,5 +1,7 @@
 # VeritasOS 💻🔥
 
+![image](https://github.com/user-attachments/assets/a32d294b-ad01-4c6b-852d-5e4199c15d76)
+
 Welcome to **VeritasOS** — a tiny dumbass bootable OS written entirely in 16-bit x86 Assembly because why not. This project does absolutely nothing useful and that's exactly the point.
 
 > *You ever wanted an OS that just prints stuff, accepts fake commands, and lets you feel powerful? Yeah, this is it.*
